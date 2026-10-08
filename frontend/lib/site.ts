@@ -5,6 +5,8 @@
 export const site = {
   name: "Khoa", // TODO: confirm display name
   product: "Flomrg",
+  company: "MERA GREEN CO., LTD", // legal entity behind Flomrg
+  country: "Vietnam",
   domain: "khoa.net",
   email: "hr@khoa.net",
   role: "Founder, Flomrg",

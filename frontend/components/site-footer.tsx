@@ -20,6 +20,11 @@ export function SiteFooter() {
           </a>
         </nav>
       </div>
+      <div className="border-t border-line">
+        <p className="mx-auto max-w-6xl px-4 py-5 font-mono text-[11px] text-muted sm:px-6">
+          {site.product} is a product of {site.company} · {site.country}
+        </p>
+      </div>
     </footer>
   );
 }

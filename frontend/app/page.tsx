@@ -459,6 +459,9 @@ function Contact() {
               Join the pilot
             </a>
           </div>
+          <p className="mt-8 font-mono text-xs text-muted">
+            {site.company} · {site.country}
+          </p>
         </div>
       </Reveal>
     </section>
