@@ -1,0 +1,23 @@
+# Stack cho khoa.net — đặt tại /home/khoanet/ trên VPS
+# Chạy sau khi network "hoamera" đã tồn tại (tạo bởi stack hoamera.com tại /home/mera/)
+#
+#   cd /home/khoanet && docker compose up -d --build
+#
+# Nginx dùng chung (/home/nginx/) gọi vào http://khoanet-web:3000 qua network "hoamera".
+
+services:
+  khoanet-web:
+    build: ./frontend
+    container_name: khoanet-web
+    environment:
+      TZ: "Asia/Ho_Chi_Minh"
+    restart: unless-stopped
+    # Cổng chỉ mở trong VPS để kiểm tra trước khi gắn nginx: curl http://127.0.0.1:3100
+    ports:
+      - "127.0.0.1:3100:3000"
+    networks:
+      - hoamera
+
+networks:
+  hoamera:
+    external: true # dùng chung network với hoamera.com, mocan.shop và nginx
