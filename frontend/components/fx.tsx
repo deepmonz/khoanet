@@ -70,7 +70,7 @@ export function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
 
   return (
     <span ref={ref} className="tabular-nums">
-      {reduced ? to : value}
+      {(reduced ? to : value).toLocaleString("en-US")}
       {suffix}
     </span>
   );

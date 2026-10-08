@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 import { useReducedMotion } from "@/lib/use-media-query";
 
-const command = "khoa build --erp --marketplace --ai --games";
+const command = "flomrg status --all-businesses";
 
 const output = [
-  { label: "next.js frontend", status: "ready" },
-  { label: "fastapi services", status: "ready" },
-  { label: "mongodb · postgres", status: "connected" },
-  { label: "redis · celery workers", status: "running" },
-  { label: "docker · nginx · ssl", status: "deployed" },
+  { label: "hoamera.com · Hoa Mera", status: "live" },
+  { label: "mocan.shop · Mộc An", status: "live" },
+  { label: "fefo batch inventory", status: "on" },
+  { label: "auto wholesale pricing", status: "on" },
+  { label: "customer credit · partner api", status: "on" },
 ];
 
 export function AnimatedTerminal() {
@@ -40,7 +40,7 @@ export function AnimatedTerminal() {
         <span className="size-2.5 rounded-full bg-[#ff5f57]" />
         <span className="size-2.5 rounded-full bg-[#febc2e]" />
         <span className="size-2.5 rounded-full bg-[#28c840]" />
-        <span className="ml-3 font-mono text-[11px] text-muted">~/your-project — zsh</span>
+        <span className="ml-3 font-mono text-[11px] text-muted">~/flomrg — production</span>
       </div>
       <div className="min-h-[232px] p-4 font-mono text-[12.5px] leading-6 sm:text-[13px]">
         <p className="break-all">
@@ -56,8 +56,8 @@ export function AnimatedTerminal() {
         ))}
         {lines > output.length && (
           <p className="mt-2">
-            <span className="text-accent-2">→</span> live at{" "}
-            <span className="text-accent underline decoration-accent/40 underline-offset-4">https://your-business.com</span>
+            <span className="text-accent-2">→</span> next:{" "}
+            <span className="text-accent">onboarding pilot flower shops</span>
             <span className="animate-blink ml-1 inline-block h-4 w-2 translate-y-0.5 bg-fg" />
           </p>
         )}

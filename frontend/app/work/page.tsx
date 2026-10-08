@@ -4,7 +4,7 @@ import { WorkGrid } from "./work-grid";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Case studies: flower-industry platforms, ERPs, marketplaces, AI automation and mobile games.",
+  description: "Track record: Flomrg and the other systems I have designed and built — flower industry, business software, marketplaces and AI automation.",
 };
 
 export default function WorkPage() {
@@ -15,10 +15,10 @@ export default function WorkPage() {
         eyebrow="Work"
         title={
           <>
-            Projects &amp; <span className="text-gradient">case studies.</span>
+            Track <span className="text-gradient">record.</span>
           </>
         }
-        body="Systems I've designed and built end to end — from data model to deployment. Client names are withheld where required."
+        body="Everything I've designed and built end to end, starting with the software that runs my own flower businesses."
       />
       <WorkGrid />
     </section>

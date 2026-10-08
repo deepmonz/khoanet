@@ -63,7 +63,7 @@ export function SiteHeader() {
             href="/#contact"
             className="hidden h-9 items-center rounded-lg bg-fg px-4 text-sm font-medium text-bg transition hover:opacity-90 sm:flex"
           >
-            Get a quote
+            Get in touch
           </Link>
           <button
             type="button"
@@ -94,7 +94,7 @@ export function SiteHeader() {
             onClick={() => setOpen(false)}
             className="mt-3 flex h-11 items-center justify-center rounded-lg bg-fg text-sm font-medium text-bg"
           >
-            Get a quote
+            Get in touch
           </Link>
         </nav>
       )}

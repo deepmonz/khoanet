@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports -- plain Node script */
 // Renders app/icon.svg into favicon.ico (16/32/48) and apple-icon.png (180, square corners).
 // Run from frontend/ after editing the SVG: node scripts/make-icons.cjs
 const fs = require("fs");

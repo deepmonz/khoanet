@@ -1,6 +1,6 @@
 # khoa.net
 
-English portfolio site to win outsourced projects. Plan: `C:\Users\hi\.claude\plans\vi-t-plan-x-y-d-ng-stateful-yeti.md`.
+English founder site used to seek startup funding for **Flomrg** (called HoaHoa inside its codebase) — the software (repo `D:/Code/admin_seller_hoa`) that runs the owner's own flower businesses Hoa Mera (hoamera.com) and Mộc An (mocan.shop). Story: operator who built his own tool, now productizing it (pilot shops → multi-tenant SaaS → FloraMarket). It is no longer an outsourcing portfolio: no "hire me"/quote copy. Original plan (outdated positioning): `C:\Users\hi\.claude\plans\vi-t-plan-x-y-d-ng-stateful-yeti.md`.
 
 ## Layout
 - `frontend/` — Next.js 16 (App Router, Cache Components on), Tailwind v4, motion, @react-three/fiber, cmdk, lenis.
@@ -9,6 +9,7 @@ English portfolio site to win outsourced projects. Plan: `C:\Users\hi\.claude\pl
 
 ## Conventions
 - All site copy and project data live in `frontend/lib/site.ts`; `TODO` marks details the owner must confirm.
+- Only state facts that are true of HoaHoa's code or the businesses. Traction numbers go in `traction` in `site.ts` (`null` = hidden; the metric grid shows once ≥2 are filled) — never invent figures.
 - Theme: dark by default, `html.light` for light. Colors are CSS variables in `app/globals.css` exposed as Tailwind colors (`bg-bg`, `text-muted`, `border-line`, `text-accent`…).
 - Scroll reveal is CSS-driven (`.reveal` + `data-in`), so content is visible without JS.
 - Respect `prefers-reduced-motion` (use `useReducedMotion` from `lib/use-media-query.ts`); the hero 3D renders a still frame instead.

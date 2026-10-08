@@ -1,20 +1,20 @@
-// Animated system diagram: client → API → data stores / workers.
+// Animated Flomrg system diagram: shop app → API → stock ledger / reports / partner shops.
 
 const nodes = [
-  { id: "client", x: 20, y: 120, w: 150, label: "Next.js", sub: "Web · Admin · PWA" },
-  { id: "api", x: 250, y: 120, w: 150, label: "FastAPI", sub: "REST · Auth · RBAC" },
-  { id: "db", x: 480, y: 30, w: 150, label: "MongoDB", sub: "or PostgreSQL" },
-  { id: "cache", x: 480, y: 120, w: 150, label: "Redis", sub: "Cache · Queues" },
-  { id: "worker", x: 480, y: 210, w: 150, label: "Celery", sub: "Jobs · AI tasks" },
+  { id: "client", x: 20, y: 120, w: 150, label: "Shop app", sub: "Sales · Stock · PWA" },
+  { id: "api", x: 250, y: 120, w: 150, label: "Flomrg API", sub: "Pricing · Credit" },
+  { id: "ledger", x: 480, y: 30, w: 150, label: "Stock ledger", sub: "Batches · FEFO" },
+  { id: "reports", x: 480, y: 120, w: 150, label: "Reports", sub: "P&L · Cash flow" },
+  { id: "partner", x: 480, y: 210, w: 150, label: "Partner API", sub: "Shops · Webhooks" },
 ];
 
 const H = 56;
 
 const edges: [string, string][] = [
   ["client", "api"],
-  ["api", "db"],
-  ["api", "cache"],
-  ["api", "worker"],
+  ["api", "ledger"],
+  ["api", "reports"],
+  ["api", "partner"],
 ];
 
 function center(id: string, side: "l" | "r") {
@@ -24,7 +24,7 @@ function center(id: string, side: "l" | "r") {
 
 export function ArchitectureDiagram() {
   return (
-    <svg viewBox="0 0 650 290" className="h-auto w-full" role="img" aria-label="System architecture: Next.js client, FastAPI service, MongoDB, Redis and Celery workers">
+    <svg viewBox="0 0 650 290" className="h-auto w-full" role="img" aria-label="Flomrg architecture: shop app, Flomrg API, stock ledger, reports and partner API">
       <defs>
         <linearGradient id="edge" x1="0" x2="1">
           <stop offset="0" stopColor="var(--accent)" />
